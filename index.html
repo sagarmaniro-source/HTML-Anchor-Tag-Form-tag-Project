@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Admition Form</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      h1 {
+        text-align: center;
+        font-size: 38px;
+        font-weight: 900;
+        color: #ffffff;
+        background: #020024;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(17, 128, 150, 1) 100%
+        );
+        padding: 20px;
+        border-radius: 20px;
+        margin: 30px auto;
+        border: 2px solid #4a90e2;
+        box-shadow: 2px 4px 30px rgb(0, 157, 255);
+        width: 520px;
+      }
+      form {
+        width: 600px;
+        margin: auto;
+        padding: 10px;
+      }
+      fieldset {
+        border: 2px solid #4a90e2;
+        border-radius: 25px;
+        padding: 30px;
+        margin-top: 10px;
+        background: linear-gradient(
+          135deg,
+          rgba(26, 26, 46, 0.95),
+          rgba(22, 33, 62, 0.95)
+        );
+      }
+      legend {
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 20px;
+        padding: 6px 20px;
+        background: linear-gradient(90deg, #4a90e2, #357abd);
+        border-radius: 15px;
+        border: 2px solid #5ca3e6;
+      }
+      td {
+        padding: 12px 8px;
+      }
+      label {
+        color: yellow;
+        font-weight: 900;
+      }
+      input,
+      select,
+      textarea {
+        border-radius: 12px;
+        padding: 10px;
+        font-size: 15px;
+        width: 100%;
+        background: linear-gradient(135deg, #c4edfe, #ffffff);
+        color: #543e3e;
+        border: 2px solid #4a90e2;
+        font-weight: 600;
+        resize: none;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 22px;
+        height: 15px;
+        cursor: pointer;
+      }
+      p {
+        display: none;
+        border: 2px solid green;
+        border-radius: 10px;
+        padding: 15px;
+        background: linear-gradient(90deg, #27ae60, #229954);
+        font-weight: 900;
+        font-size: 16px;
+        margin-top: 5px;
+        color: #ffffff;
+      }
+      input:focus + p {
+        display: block;
+      }
+      select:focus + p {
+        display: block;
+      }
+      textarea:focus + p {
+        display: block;
+      }
+      .valid,
+      .invalid {
+        height: 20px;
+        width: 20px;
+        margin-top: 5px;
+        display: none;
+      }
+      input[type="email"]:focus:valid + p ~ img.valid {
+        display: inline;
+      }
+      input[type="email"]:focus:invalid + p ~ img.invalid {
+        display: inline;
+      }
+      .gender {
+        color: white;
+        display: inline-block;
+        transition: all 2s;
+      }
+      input[type="radio"]:checked + label {
+        transition: all 2s;
+        transform: scale(1.2);
+        color: #4a90e2;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        width: 300px;
+        background-color: #1325a9;
+        color: white;
+        padding: 10px 0px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 900;
+      }
+      button:hover {
+        background-color: #1325a9;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+      input[type="number"]:focus:in-range + p ~ img.valid {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Registation Form</h1>
+    <form action="https://www.youtube.com/@radhe_radhe.4595">
+      <fieldset>
+        <legend>Student Information</legend>
+        <table>
+          <tr>
+            <td><label for="Full Name">Full Name</label></td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="full name"
+                id="1"
+                placeholder="Sagar"
+                required
+              />
+              <p>Enter your name</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="date of birth">Date Of Birth</label></td>
+            <td>
+              <input
+                class="input"
+                type="date"
+                name="dob"
+                id="2"
+                placeholder="24/01/2002"
+                required
+              />
+              <p>Enter your DOB</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="5"
+                placeholder="sagarmaniro@gmail.com"
+                required
+              />
+              <p>Enter a valid email</p>
+              <img
+                class="valid"
+                src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png"
+                alt=""
+              />
+              <img
+                class="invalid"
+                src="https://cdn-icons-png.flaticon.com/128/11560/11560478.png"
+                alt=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="nationality">Nationality</label></td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="nationality"
+                id="3"
+                placeholder="india"
+                required
+              />
+              <p>Enter your country</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Phone number">Phone Number</label></td>
+            <td>
+              <input
+                class="input"
+                type="tel"
+                name="phone number"
+                id="4"
+                placeholder="7894507951"
+                required
+              />
+              <p>Enter 10 digit phone number</p>
+              <img
+                class="valid"
+                src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png"
+                alt=""
+              />
+              <img
+                class="invalid"
+                src="https://cdn-icons-png.flaticon.com/128/11560/11560478.png"
+                alt=""
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="age">Age</label></td>
+            <td>
+              <input
+                id="age"
+                type="number"
+                min="18"
+                max="50"
+                placeholder="Enter age"
+              />
+              <p>Enter age between 18 to 50</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hobby">Hobby</label></td>
+            <td>
+              <input type="checkbox" name="hobby" value="dancing" />dancing
+              <input type="checkbox" name="hobby" value="signing" />signing
+              <input
+                type="checkbox"
+                name="hobby"
+                value="travelling"
+              />travelling
+              <input type="checkbox" name="hobby" value="others" />Others
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Gender">Gender</label></td>
+            <td>
+              <input
+                id="male"
+                type="radio"
+                name="Gender"
+                value="male"
+                required
+              /><label class="gender">Male </label>
+
+              <input
+                id="female"
+                type="radio"
+                name="Gender"
+                value="female"
+                required
+              /><label class="gender">Female </label>
+
+              <input
+                id="others"
+                type="radio"
+                name="Gender"
+                value="Others"
+                required
+              /><label class="gender">Others </label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Address</label></td>
+            <td>
+              <textarea
+                class="input"
+                name="address"
+                id="15"
+                rows="5"
+                cols="30"
+                required
+              ></textarea>
+              <p>Enter your address</p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Guardian Information</legend>
+        <table>
+          <tr>
+            <td><label for="guardian name">Guardian Name</label></td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="guardian name"
+                id="6"
+                placeholder="sipu"
+                required
+              />
+              <p>Enter your Guardian name</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="relationship to student"
+                >Relationship to Student</label
+              >
+            </td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="relationship"
+                id="7"
+                placeholder="son"
+                required
+              />
+              <p>Enter your relationship</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Phone number">Phone Number</label></td>
+            <td>
+              <input
+                class="input"
+                type="tel"
+                name="phone number"
+                id="8"
+                placeholder="8018077145"
+                required
+              />
+              <p>Enter 10 digit phone number</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="alternate number">Alternate Phone Number</label>
+            </td>
+            <td>
+              <input
+                class="input"
+                type="tel"
+                name="alternate number"
+                id="9"
+                placeholder="1236578942"
+                required
+              />
+              <p>Enter 10 digit whatsapp number</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="10"
+                placeholder="sagarmaniro@gmail.com"
+                required
+              />
+              <p>Enter a valid email</p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Education Information</legend>
+        <table>
+          <tr>
+            <td><label for="Institution Name">Institute Name</label></td>
+            <td>
+              <input
+                class="input"
+                type="text"
+                name="Institution name"
+                id="11"
+                required
+              />
+              <p>Enter Institute Name</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="passing year">Passing Year</label></td>
+            <td>
+              <select class="input" name="year" id="12" required>
+                <option value="select">~select~</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+              <p>Enter college passing year</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Branch">Branch</label></td>
+            <td>
+              <select class="input" name="branch" id="14" required>
+                <option value="select">~select~</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="Physics">Physics</option>
+                <option value="Math">Math</option>
+                <option value="computer Science">Computer Science</option>
+                <option value="biology">Biology</option>
+                <option value="Botany">Botany</option>
+              </select>
+              <p>Enter your branch</p>
+            </td>
+          </tr>
+        </table>
+        <br />
+      </fieldset>
+      <button>submit</button>
+    </form>
+  </body>
+</html>
